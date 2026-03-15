@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+/* Markdown Styling */
+.markdown-body h1 { @apply text-2xl font-bold mb-4 mt-6; }
+.markdown-body h2 { @apply text-xl font-bold mb-3 mt-5; }
+.markdown-body h3 { @apply text-lg font-bold mb-2 mt-4; }
+.markdown-body p { @apply mb-4 text-white/80 leading-relaxed; }
+.markdown-body ul { @apply list-disc pl-6 mb-4 space-y-2; }
+.markdown-body ol { @apply list-decimal pl-6 mb-4 space-y-2; }
+.markdown-body li { @apply text-white/80; }
+.markdown-body strong { @apply text-white font-semibold; }
+.markdown-body blockquote { @apply border-l-4 border-[#632CA6] pl-4 italic my-4 text-white/60; }
+.markdown-body code { @apply bg-white/10 px-1.5 py-0.5 rounded font-mono text-xs text-[#7742E6]; }
+.markdown-body pre { @apply bg-[#111] p-4 rounded-xl border border-white/10 overflow-x-auto my-4; }
+.markdown-body pre code { @apply bg-transparent p-0 text-white/90; }
+.markdown-body table { @apply w-full border-collapse mb-4; }
+.markdown-body th { @apply text-left border-b border-white/10 pb-2 font-semibold text-white/60 text-xs uppercase tracking-wider; }
+.markdown-body td { @apply py-2 border-b border-white/5 text-sm text-white/80; }

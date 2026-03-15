@@ -1,0 +1,4 @@
+interface:
+  display_name: "Datadog Next.js Observability"
+  short_description: "Datadog APM, RUM & LLM Obs for Next.js on Cloud Run"
+  default_prompt: "Help me add Datadog observability to my Next.js app on Cloud Run"
