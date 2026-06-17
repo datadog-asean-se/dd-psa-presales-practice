@@ -102,7 +102,7 @@ describe('POST /api/chat — input validation', () => {
   // ── modelId ───────────────────────────────────────────────────────────────
 
   describe('modelId', () => {
-    it.each(['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-3.1-pro-preview', 'gemini-3-pro-preview'])(
+    it.each(['gemini-flash-latest', 'gemini-3.5-flash', 'gemini-3.1-pro-preview', 'gemini-2.5-pro'])(
       'accepts valid modelId "%s"',
       async (modelId) => {
         const res = await POST(makeReq({ messages: validMessages, modelId }));
@@ -193,7 +193,7 @@ describe('POST /api/chat — input validation', () => {
       const res = await POST(makeReq({
         messages: validMessages,
         exerciseId: 'techfit',
-        modelId: 'gemini-2.5-flash',
+        modelId: 'gemini-3.5-flash',
         language: 'Japanese',
         isThinkingEnabled: false,
         teamName: 'Team Ninja',

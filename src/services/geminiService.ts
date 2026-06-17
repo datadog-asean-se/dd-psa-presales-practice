@@ -133,7 +133,7 @@ export async function chatWithGeminiStream(
   onChunk: (chunk: string) => void,
   exerciseId?: string,
   language: string = "English",
-  modelId: string = "gemini-2.5-pro",
+  modelId: string = "gemini-flash-latest",
   isThinkingEnabled: boolean = false,
   teamName?: string,
   sessionId?: string,
