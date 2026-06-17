@@ -88,7 +88,7 @@ spec:
             - name: DD_SOURCE
               value: nodejs
             - name: DD_TAGS
-              value: team:agentic-ai
+              value: team:presales-practice
             - name: DD_GIT_COMMIT_SHA
               value: '__FULL_SHA__'
             - name: DD_GIT_REPOSITORY_URL

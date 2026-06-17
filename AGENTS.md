@@ -156,7 +156,7 @@ baked into the browser bundle at build time via `next.config.mjs` — do not set
 
 ## Deployment
 
-Two-container Cloud Run service in `datadog-ese-sandbox` / `us-west1`:
+Two-container Cloud Run service deployed to your GCP project / region (configured in `.env`):
 
 1. **nginx-container** — AI Studio proxy (port 8080). `GEMINI_API_KEY` injected from GCP Secret Manager.
 2. **app-container** — Next.js standalone app (port 3000). `GEMINI_API_KEY`, `DD_API_KEY`, and all Datadog config injected from GCP Secret Manager / Cloud Run env.

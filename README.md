@@ -58,7 +58,7 @@ Both containers run as a **Cloud Run multi-container (sidecar) service**. API ke
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/nuttea/dd-psa-presales-practice.git
+git clone https://github.com/datadog-asean-se/dd-psa-presales-practice.git
 cd dd-psa-presales-practice
 
 # 2. Install dependencies
@@ -90,7 +90,7 @@ These variables control where `deploy.sh` builds and deploys the Cloud Run servi
 
 | Variable | Default | Description |
 |---|---|---|
-| `GCP_PROJECT_ID` | `datadog-ese-sandbox` | GCP project to deploy into |
+| `GCP_PROJECT_ID` | *(required)* | GCP project to deploy into |
 | `GCP_REGION` | `us-west1` | Cloud Run region |
 | `CR_SERVICE_NAME` | `datadog-presales-practice-simulator` | Cloud Run service name |
 | `ARTIFACT_REPO` | `cloud-run-source-deploy` | Artifact Registry repository name (created automatically if missing) |
@@ -100,7 +100,7 @@ These variables control where `deploy.sh` builds and deploys the Cloud Run servi
 | Variable | Default | Description |
 |---|---|---|
 | `APP_URL` | *(auto-derived from project number + region)* | Public URL of the deployed service. Leave blank — `deploy.sh` derives it automatically. |
-| `APPLET_ID` | `be05c2c7-2e01-49fc-99b5-ccc2c6e168e7` | AI Studio applet ID used by the nginx sidecar container |
+| `APPLET_ID` | *(required)* | AI Studio applet ID used by the nginx sidecar container — create your own at [aistudio.google.com](https://aistudio.google.com) |
 
 #### Datadog
 

@@ -138,7 +138,7 @@ You are an **AI Coaching Agent**. You are NOT roleplaying as a customer.
 ---
 
 ## The 7 Signs of Technical Fit
-*(Source: Carlo Nizeti — Qualification: 7 Signs of a Technical Fit)*
+*(Datadog Presales Qualification Framework)*
 
 ### Sign 1: Prospect uses separate Infrastructure, APM, and Log Management solutions
 

@@ -33,14 +33,14 @@ if [ -f .env ]; then
 fi
 
 # ── Configuration (env vars take precedence; hardcoded values are fallbacks) ───
-PROJECT_ID="${GCP_PROJECT_ID:-datadog-ese-sandbox}"
+PROJECT_ID="${GCP_PROJECT_ID:?GCP_PROJECT_ID must be set in .env}"
 REGION="${GCP_REGION:-us-west1}"
 SERVICE_NAME="${CR_SERVICE_NAME:-datadog-presales-practice-simulator}"
 ARTIFACT_REPO="${ARTIFACT_REPO:-cloud-run-source-deploy}"
 
 IMAGE="$REGION-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$SERVICE_NAME"
 
-APPLET_ID="${APPLET_ID:-be05c2c7-2e01-49fc-99b5-ccc2c6e168e7}"
+APPLET_ID="${APPLET_ID:?APPLET_ID must be set in .env — create an AI Studio applet at https://aistudio.google.com}"
 DD_ENV="${DD_ENV:-prod}"
 
 # Derive the numeric project number (needed for service.yaml namespace and default APP_URL).
